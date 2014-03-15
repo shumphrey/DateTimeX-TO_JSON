@@ -19,3 +19,5 @@ Brief Synopsis
     use JSON;
 
     my $out = JSON->new->convert_blessed(1)->encode([DateTime->now]);
+
+You can specify any formatter that conforms to the DateTime::Format methods.
