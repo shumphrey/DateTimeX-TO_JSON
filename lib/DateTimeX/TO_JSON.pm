@@ -21,13 +21,26 @@ structure.
 Can be given an optional DateTime formatter on import such as
 L<DateTime::Format::RFC3339>. Any formatter that supports new and
 format_datetime will work.
-Defaults to turning DateTime into a string by call L<DateTime/datetime>
+Defaults to turning DateTime into a string by calling L<DateTime/datetime>
+
+If you want to format the date in your own way, then just define the following
+function in your code instead of using this module:
+
+    sub DateTime::TO_JSON {
+        my $dt = shift;
+        # do something with $dt, such as:
+        return $dt->ymd;
+    }
+
+=head1 AUTHOR
+
+Steven Humphrey E<lt>shumphrey@cpan.orgE<gt>
 
 =cut
 
+package DateTimeX::TO_JSON;
 use strict;
 use warnings;
-package DateTimeX::TO_JSON;
 use Class::Load;
 use Carp;
 
