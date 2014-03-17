@@ -28,7 +28,7 @@ Defaults to turning DateTime into a string by call L<DateTime/datetime>
 use strict;
 use warnings;
 package DateTimeX::TO_JSON;
-use Module::Load;
+use Class::Load;
 use Carp;
 
 sub import {
@@ -49,7 +49,7 @@ sub import {
         }
     }
     elsif ( $args{formatter} ) {
-        load $args{formatter};
+        Class::Load::load_class $args{formatter};
         *DateTime::TO_JSON = sub {
             $args{formatter}->new->format_datetime($_[0]);
         }
