@@ -11,7 +11,7 @@
 =head1 DESCRIPTION
 
 Adds a TO_JSON method to L<DateTime> so that L<JSON> and other
-JSON serializers can serialize it when it encounters it a data
+JSON serializers can serialize it when they encounter it in a data
 structure.
 
 Can be given an optional DateTime formatter on import such as
