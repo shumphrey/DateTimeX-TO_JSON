@@ -1,8 +1,4 @@
 # ABSTRACT: Adds a TO_JSON method to DateTime
-=head1 NAME
-
-DateTimeX::TO_JSON
-
 =head1 SYNOPSIS
 
   use DateTime;
@@ -31,10 +27,6 @@ function in your code instead of using this module:
         # do something with $dt, such as:
         return $dt->ymd;
     }
-
-=head1 AUTHOR
-
-Steven Humphrey E<lt>shumphrey@cpan.orgE<gt>
 
 =cut
 
