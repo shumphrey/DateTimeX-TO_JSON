@@ -34,7 +34,6 @@ package DateTimeX::TO_JSON;
 use strict;
 use warnings;
 use Class::Load;
-use Carp;
 
 sub import {
     my ($class, @args) = @_;
@@ -47,6 +46,8 @@ sub import {
             $args{$_} = shift @args;
         }
     }
+
+    no warnings 'redefine';
 
     if ( $args{formatter} && ref($args{formatter}) ) {
         *DateTime::TO_JSON = sub {
