@@ -1,0 +1,4 @@
+0.0.3 2014-03-28 15:50 (SHUMPHREY)
+    * Add DateTime to dependency list
+    * Remove redefine warnings
+    * Add Changes file
